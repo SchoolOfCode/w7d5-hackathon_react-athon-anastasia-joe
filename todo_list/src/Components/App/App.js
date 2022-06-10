@@ -15,7 +15,7 @@ function App() {
     }
   
     function onClickToDo () {
-      const newTask = { id: "id", task: toDo, completed: false };
+      const newTask = toDo;
       console.log(newTask)
       addTask(newTask)
 
@@ -31,13 +31,13 @@ function App() {
     <Input theValue={handleChange} onClickToDo={onClickToDo} />
     <List >
      
-            {toList.map((item =>
-            {/* <ListItem item= {item} /> */}
+            {toList.map((item => 
+            <ListItem item= {item} />
 
             ))}
     </List>
-
     </div>
+
   );
 }
 
