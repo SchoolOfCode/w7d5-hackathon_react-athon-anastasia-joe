@@ -8,9 +8,9 @@ import { useState } from 'react'
 
 function App() {
     const [toDo, setToDo] = useState('')
+    const [toList, setList] = useState({})
 
     function handleChange(e) {
-      console.log(e.target.value);
       setToDo(e.target.value) 
 
     }
@@ -22,15 +22,16 @@ function App() {
 
       function addTask(task) {
       const newTask = { id: "id", task: task, completed: false };
-      setToDo([...toDo, newTask]); //needs work
-      console.log(newTask)
+      setList([{...toDo, newTask}]); //needs work
+      console.log(toList)
     }
 
     return (
     <div className="App">
     <Input theValue={handleChange} onClickToDo={onClickToDo} />
     <List >
-      <ListItem text={newTask}/>
+      <ListItem />
+            <ListItem text={'hello'}/>
     </List>
 
     </div>
