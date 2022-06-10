@@ -5,19 +5,22 @@ import List from '../List'
 import ListItem from '../List/ListItem'
 import {useState} from 'react'
 
+
 function App() {
 
-  const [text, setText] = useState('')
-
-
+      
+  function handleChange(e) {
+    console.log(e.target.value);
+    // setText(e.target.value) 
+  }
 
   return (
     <div className="App">
-    <Input />
+    <Input theValue={handleChange}/>
     <List>
-      <ListItem text='something' />
-      <ListItem text='something' />
-      <ListItem text='something' />
+      <ListItem />
+      <ListItem />
+      <ListItem />
 
     </List>
 
