@@ -17,17 +17,20 @@ function App() {
   
     function onClickToDo () {
       console.log(toDo)
-      //addTask(task) function
+      addTask(toDo)
+    }
+
+      function addTask(task) {
+      const newTask = { id: "id", task: task, completed: false };
+      setToDo([...toDo, newTask]); //needs work
+      console.log(newTask)
     }
 
     return (
     <div className="App">
     <Input theValue={handleChange} onClickToDo={onClickToDo} />
     <List >
-      <ListItem />
-      <ListItem />
-      <ListItem />
-
+      <ListItem text={newTask}/>
     </List>
 
     </div>
