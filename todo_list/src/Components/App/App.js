@@ -8,21 +8,21 @@ import { useState } from 'react'
 
 function App() {
     const [toDo, setToDo] = useState('')
-    const [toList, setList] = useState({})
+    const [toList, setList] = useState([])
 
     function handleChange(e) {
       setToDo(e.target.value) 
-
     }
   
     function onClickToDo () {
-      console.log(toDo)
-      addTask(toDo)
+      const newTask = { id: "id", task: toDo, completed: false };
+      console.log(newTask)
+      addTask(newTask)
+
     }
 
       function addTask(task) {
-      const newTask = { id: "id", task: task, completed: false };
-      setList([{...toDo, newTask}]); //needs work
+      setList([...toList, task]); //needs work one behind
       console.log(toList)
     }
 
