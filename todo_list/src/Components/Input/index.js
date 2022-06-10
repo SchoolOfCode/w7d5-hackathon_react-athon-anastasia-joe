@@ -17,11 +17,15 @@ const Input = (props) => {
     setToDo(e.target.value) 
     console.log(setToDo)
   }
+
+
+
+
        return (
         <div>
             <h1>Todo List</h1>
             <input onChange={props.theValue} ></input>
-            <button type="text" >Add a todo</button>
+            <button onClick >Add a todo</button>
             <br/>
             <h3>Filters:</h3>
             <button>Pending</button>
