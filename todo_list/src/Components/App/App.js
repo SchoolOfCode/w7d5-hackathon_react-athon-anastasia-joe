@@ -8,15 +8,10 @@ import {useState} from 'react'
 
 function App() {
 
-      
-  function handleChange(e) {
-    console.log(e.target.value);
-    // setText(e.target.value) 
-  }
-
+    
   return (
     <div className="App">
-    <Input theValue={handleChange}/>
+    <Input />
     <List>
       <ListItem />
       <ListItem />
