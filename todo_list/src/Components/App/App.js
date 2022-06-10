@@ -15,26 +15,24 @@ function App() {
     }
   
     function onClickToDo () {
-      const newTask = toDo;
+      const newTask = toDo; //need to set toDo to an object { id: "id", name: name, completed: false }
       console.log(newTask)
       addTask(newTask)
 
     }
 
       function addTask(task) {
-      setList([...toList, task]); //needs work one behind
-      console.log(toList) //map through the array
+      setList([...toList, task]); 
+      console.log(toList) 
     }
 
     return (
     <div className="App">
     <Input theValue={handleChange} onClickToDo={onClickToDo} />
     <List >
-     
-            {toList.map((item => 
-            <ListItem item= {item} />
-
-            ))}
+      {toList.map((item => 
+        <ListItem item= {item} /> //need to destructure?? the item object??
+      ))}
     </List>
     </div>
 
