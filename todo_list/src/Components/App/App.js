@@ -23,15 +23,18 @@ function App() {
 
       function addTask(task) {
       setList([...toList, task]); //needs work one behind
-      console.log(toList)
+      console.log(toList) //map through the array
     }
 
     return (
     <div className="App">
     <Input theValue={handleChange} onClickToDo={onClickToDo} />
     <List >
-      <ListItem />
-            <ListItem text={'hello'}/>
+     
+            {toList.map((item =>
+            {/* <ListItem item= {item} /> */}
+
+            ))}
     </List>
 
     </div>
