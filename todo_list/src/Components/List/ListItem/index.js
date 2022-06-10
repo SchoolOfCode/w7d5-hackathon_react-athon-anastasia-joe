@@ -2,7 +2,11 @@ import React from 'react'
 
 const ListItem = (props) => {
     return (
-        <li>{props.text}</li>
+        <div>
+            <input type='checkbox'></input>
+            <li>{props.text}</li>
+            <button>Delete this todo</button>
+        </div>
     )
 }
 
